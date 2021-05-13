@@ -1,5 +1,3 @@
-package jcolonia.daw2020.mayo;
-
 /**
  * Excepción usada generalmente en la aplicación «Sumatorio MVC» cuando se
  * intenta añadir con formato incorrecto o fuera del rango soportado.

@@ -1,4 +1,3 @@
-package jcolonia.daw2020.mayo;
 
 import java.io.PrintStream;
 import java.util.Arrays;
