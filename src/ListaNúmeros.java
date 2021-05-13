@@ -85,6 +85,9 @@ public class ListaNúmeros {
 		double valor = transformarEntradaTexto(entrada);
 		lista.add(Math.copySign(valor, +0.0));
 	}
+	public void ejecutar(ArrayList recivida) {
+		ArrayList<Double> lista=recivida;
+	}
 
 	/**
 	 * Transforma un texto en un valor compatible con la lista.
@@ -133,6 +136,10 @@ public class ListaNúmeros {
 	 */
 	public int getNúmSumandos() {
 		return lista.size();
+	}
+	public  void geListaSumandos() {
+		System.out.println(lista);
+		
 	}
 
 	/**

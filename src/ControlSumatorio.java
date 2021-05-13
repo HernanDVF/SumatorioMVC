@@ -7,6 +7,7 @@ import java.util.Scanner;
  * @author <a href="dmartin.jcolonia@gmail.com">David H. Martín</a>
  */
 public class ControlSumatorio {
+	ListaNúmeros Lista= new ListaNúmeros();;
 	/**
 	 * Texto identificativo de las funciones de la aplicación que aparecerán en el
 	 * menú principal.
@@ -51,10 +52,10 @@ public class ControlSumatorio {
 				cargarSumando();
 				break;
 			case 2: // Opción 2: Mostrar sumandos
-//				mostrarSumandos();
+				mostrarSumandos();
 				break;
 			case 3: // Opción 3: Mostrar suma
-//				mostrarSuma();
+				Lista.getSuma() ;
 				break;
 			case 4: // Opción 4: Reset
 //				restablecer();
@@ -66,7 +67,10 @@ public class ControlSumatorio {
 			}
 		} while (entrada != 0);
 	}
-
+	public void mostrarSumandos() {
+		menúPrincipal.decirSumandos();
+	}
+	
 	private void ejecutarGenérico(int id) {
 		String mensaje;
 		mensaje = String.format("%n  [%03d] Ha elegido la opción %d: «%s»", VistaMenúGeneral.getNúmRespuestas(), id,
@@ -74,7 +78,7 @@ public class ControlSumatorio {
 		menúPrincipal.mostrarMensaje(mensaje);
 	}
 	public void cargarSumando() {
-		respuesta=menúPrincipal.getSumando();
+		menúPrincipal.getSumando();
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

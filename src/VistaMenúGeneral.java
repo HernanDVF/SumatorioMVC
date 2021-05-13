@@ -1,9 +1,12 @@
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class VistaMenúGeneral {
+	ListaNúmeros Lista=new ListaNúmeros();
+	ArrayList<Double> listaAñadida;
 	static String s;
 	int respuesta;
 	/**
@@ -102,13 +105,20 @@ public class VistaMenúGeneral {
 		} while (!salir);
 		return entrada;
 	}
-	public int getSumando() {
-		String[] listaNumeros;
-		try {
+	ArrayList<String> entradas = new ArrayList<String>();
+	public void decirSumandos() {
+		System.out.print(entradas);
+	}
+	public void getSumando() {
+		ListaNúmeros grupo = new ListaNúmeros();
 		System.out.println("Introduce el Sumando");
-		sumando=in.nextInt();
-		;}catch(InputMismatchException ime) {
-			System.out.println("Introduce un valor valido.");
-		}return sumando;
+		String entrada=in.nextLine();
+		
+		
+
+		entradas.add(entrada);
+		Lista.ejecutar(entradas);
+		
+
 	}
 }
