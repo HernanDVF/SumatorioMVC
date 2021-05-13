@@ -201,7 +201,33 @@ public class ListaNúmeros {
 
 		return texto;
 	}
+ public void prueba(String[] recibida) {
+		String[] entradas = recibida;
 
+		ListaNúmeros grupo = new ListaNúmeros();
+
+		System.out.println("Ensayos:");
+		System.out.println(Arrays.toString(entradas));
+		System.out.println();
+
+		for (String entrada : entradas) {
+			try {
+				grupo.add(entrada);
+			} catch (SumatorioNumberException e) {
+				System.err.printf("   ** %s → %s%n", entrada, e.getLocalizedMessage());
+			}
+		}
+
+		System.out.println();
+		ArrayList<String> textos = grupo.toListaString();
+
+		for (String texto : textos) {
+			System.out.println(texto);
+		}
+
+		System.out.println();
+		System.out.println(grupo);
+ }
 	/**
 	 * Ensayo demostración de las funcionalidades de la clase.
 	 * 
